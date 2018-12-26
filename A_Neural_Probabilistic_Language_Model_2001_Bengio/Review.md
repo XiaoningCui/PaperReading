@@ -7,9 +7,9 @@
 # 1. Introduction (Key Points)
 - Curse of Dimensionality
 - A statistical model of language
-- $$P(w^T_1)=\Pi^T_{t=1}P(w_t|w^{t-1}_1)$$
+- ![statistical_language_model](Imgs/statistical_language_model.png)
 - 为了减少复杂度，提出n-gram模型，即下一个词的条件概率取决于最近的n-1个词：
-- $$P(w_t|w^{t-1}_1) \approx P(w_t|w^{t-1}_{t-n+1})$$
+- ![n-gram](Imgs/n_gram.png)
 - 应用此模型时，如何泛化：遇到训练语料中未出现的sequence时，去看更短的上文sequence，__即long词序列的概率由short词序列（1、2、3个词）“gluing”得到__。
 - 现有方法两个缺陷：
   - n-gram只考虑1、2、3个上文词汇，不包括更长的上文
@@ -46,4 +46,4 @@
 <br>
 <br>(b) Cycling架构
 
-<br>![Neural_Archietecture](imgs/network_architecture.jpg)
+<br>![Neural_Archietecture](Imgs/network_architecture.jpg)
